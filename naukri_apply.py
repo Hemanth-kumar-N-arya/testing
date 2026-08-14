@@ -566,6 +566,8 @@ def run():
         browser_mode = profile.data.get("browser_mode", "visible")
         if browser_mode == "headless":
             browser = p.chromium.launch(headless=True, slow_mo=150)
+        else:
+            browser = p.chromium.launch(headless=True, slow_mo=150)
         context = browser.new_context(storage_state=SESSION_FILE)
         page = context.new_page()
 
